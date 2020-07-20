@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+</head>
+<body>
+<img id="off_light" src="img/off.gif" onclick="func();">
+<img id="on_light" src="img/on.gif">
+<script>
+        function func() {
+            alert("我被点了");
+        }
+        function func2() {
+            alert("咋老点我");
+        }
+        var light2 = document.getElementById("on_light");
+        light2.onclick = func2;
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图展示</title>
+</head>
+<body>
+    <img id="banner" src="img/banner_1.jpg" width="100%">
+    <script>
+        var num = 1;
+        function func() {
+           pic.src = "img/banner_" + (num % 3 + 1) + ".jpg";
+           num ++;
+        }
+        var pic = document.getElementById("banner");
+        setInterval(func, 1000);
+    </script>
+</body>
+</html>

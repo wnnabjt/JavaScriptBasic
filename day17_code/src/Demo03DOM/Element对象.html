@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element对象</title>
+    <style>
+        .cls1 {
+            color: red;
+        }
+    </style>
+</head>
+<!--
+    * Element：元素对象
+    1. 获取/创建：通过document来获取和创建
+    2. 方法：
+    1. removeAttribute()：删除属性
+    2. setAttribute()：设置属性
+-->
+<body>
+    <span id="sp"> 这是一个用来测试Element对象方法的语句</span>
+    <input type="button" value="添加class属性" id="add">
+    <input type="button" value="删除class属性" id="delete1">
+</body>
+<script>
+    var sp = document.getElementById("sp");
+    var add = document.getElementById("add");
+    var delete1 = document.getElementById("delete1");
+    add.onclick=function() {
+        sp.setAttribute("class", "cls1");
+    }
+    delete1.onclick=function() {
+        sp.removeAttribute("class");
+    }
+</script>
+</html>

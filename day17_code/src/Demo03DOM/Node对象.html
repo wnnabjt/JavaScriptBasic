@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node对象</title>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+        #div1 {
+            width:200px;
+            height:200px;
+        }
+        #div2 {
+            width:100px;
+            height:100px;
+        }
+        #div3 {
+            width:100px;
+            height:100px;
+        }
+
+    </style>
+</head>
+<!--
+    * Node：节点对象，其他5个的父对象
+        * 特点：所有dom对象都可以被认为是一个节点
+        * 方法：
+            * CRUD dom树：
+                * appendChild()：向节点的子节点列表的结尾添加新的子节点。
+                * removeChild()	：删除（并返回）当前节点的指定子节点。
+                * replaceChild()：用新节点替换一个子节点。
+        * 属性：
+            * parentNode 返回节点的父节点。
+-->
+<body>
+    <div id="div1">
+        <div id="div2">
+
+        </div>
+    </div>
+    <a href="javascript:void(0);", id="del">点击删除子节点</a>
+    <a href="javascript:void(0);", id="add">点击增加子节点</a>
+</body>
+<script>
+    var del = document.getElementById("del");
+    var add = document.getElementById("add");
+    var div2 = document.getElementById("div2");
+    del.onclick=function() {
+        div1.removeChild(div2);
+    }
+    var div3 = document.createElement("div");
+    div3.setAttribute("id", "div3");
+    add.onclick=function() {
+        div1.appendChild(div3);
+    }
+    var div1 = div2.parentNode;
+    alert(div1);
+</script>
+</html>

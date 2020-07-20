@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>灯泡点击</title>
+</head>
+<body>
+
+    <img id="off_light" src="img/off.gif">
+
+    <script>
+        var flag = false;
+        function func() {
+            if(!flag) {
+                flag = true;
+                light.src="img/on.gif";
+            } else {
+                flag = false;
+                light.src="img/off.gif";
+            }
+        }
+        var light = document.getElementById("off_light");
+        light.onclick = func;
+    </script>
+
+
+</body>
+</html>

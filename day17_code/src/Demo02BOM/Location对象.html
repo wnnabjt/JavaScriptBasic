@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location对象</title>
+</head>
+<body>
+    <input type="button" value="刷新" id="sx"><br>
+    <input type="button" value="去百度" id="goBaidu"><br>
+    <script>
+        var sx = document.getElementById("sx");
+        sx.onclick = function() {
+            location.reload();
+        }
+        var goBaidu = document.getElementById("goBaidu");
+        goBaidu.onclick = function() {
+            location.href="https://baidu.com";
+        }
+    </script>
+</body>
+</html>
